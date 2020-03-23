@@ -4,7 +4,7 @@
 
 #import "MessageViewController.h"
 
-static NSString * const kMyAPIKey = @"<insert API key here>";
+static NSString * const kMyAPIKey = @"AIzaSyA8Id-1IYFlJqh1E3J60W1eQ8MYXOcb8E8";
 static NSString * const kBackgroundModeSaveKey = @"NearbyBackgroundEnabled";
 
 

@@ -22,6 +22,7 @@
 		41FCD7691AA104F90075222E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FCD7591AA104F90075222E /* Security.framework */; };
 		41FCD76A1AA104F90075222E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FCD75A1AA104F90075222E /* UIKit.framework */; };
 		41FCD76C1AA104F90075222E /* libobjc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FCD75C1AA104F90075222E /* libobjc.dylib */; };
+		EDD0C396AE2BEC9D57C0CB36 /* libPods-NearbyBackground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F4E60776BB610B89ECA19B /* libPods-NearbyBackground.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,9 @@
 		41FCD7591AA104F90075222E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		41FCD75A1AA104F90075222E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		41FCD75C1AA104F90075222E /* libobjc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjc.dylib; path = usr/lib/libobjc.dylib; sourceTree = SDKROOT; };
+		C6F4E60776BB610B89ECA19B /* libPods-NearbyBackground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NearbyBackground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED8F356C7282EDF32B9EC303 /* Pods-NearbyBackground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearbyBackground.release.xcconfig"; path = "Target Support Files/Pods-NearbyBackground/Pods-NearbyBackground.release.xcconfig"; sourceTree = "<group>"; };
+		FCECF24D1D6A0DD1B95A0F77 /* Pods-NearbyBackground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearbyBackground.debug.xcconfig"; path = "Target Support Files/Pods-NearbyBackground/Pods-NearbyBackground.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 				41FCD7681AA104F90075222E /* MobileCoreServices.framework in Frameworks */,
 				41FCD7601AA104F90075222E /* CFNetwork.framework in Frameworks */,
 				41FCD7661AA104F90075222E /* Foundation.framework in Frameworks */,
+				EDD0C396AE2BEC9D57C0CB36 /* libPods-NearbyBackground.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +78,7 @@
 				4110CD7A1A9CF82000456D43 /* Source */,
 				4110CDA41A9CFBF700456D43 /* Frameworks */,
 				4110CD791A9CF82000456D43 /* Products */,
+				80B681207CE3DAD4DFCD78E5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,8 +126,18 @@
 				41FCD7591AA104F90075222E /* Security.framework */,
 				41FCD75A1AA104F90075222E /* UIKit.framework */,
 				41FCD75C1AA104F90075222E /* libobjc.dylib */,
+				C6F4E60776BB610B89ECA19B /* libPods-NearbyBackground.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80B681207CE3DAD4DFCD78E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCECF24D1D6A0DD1B95A0F77 /* Pods-NearbyBackground.debug.xcconfig */,
+				ED8F356C7282EDF32B9EC303 /* Pods-NearbyBackground.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4110CD9B1A9CF82000456D43 /* Build configuration list for PBXNativeTarget "NearbyBackground" */;
 			buildPhases = (
+				BF80CA7B511D25BE746003A1 /* [CP] Check Pods Manifest.lock */,
 				4110CD741A9CF82000456D43 /* Sources */,
 				4110CD751A9CF82000456D43 /* Frameworks */,
 				4110CD761A9CF82000456D43 /* Resources */,
+				714DFD8D3B3A80C799BBC237 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,6 +173,7 @@
 				TargetAttributes = {
 					4110CD771A9CF82000456D43 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = S2563944FC;
 					};
 				};
 			};
@@ -163,6 +182,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -187,6 +207,52 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		714DFD8D3B3A80C799BBC237 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NearbyBackground/Pods-NearbyBackground-resources.sh",
+				"${PODS_ROOT}/NearbyMessages/Resources/resources/GNSSharedResources.bundle",
+				"${PODS_ROOT}/NearbyMessages/Resources/resources/ic_expand_more.xcassets",
+				"${PODS_ROOT}/NearbyMessages/Resources/resources/ic_nearby_48pt.xcassets",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GNSSharedResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.car",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NearbyBackground/Pods-NearbyBackground-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF80CA7B511D25BE746003A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NearbyBackground-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4110CD741A9CF82000456D43 /* Sources */ = {
@@ -293,28 +359,34 @@
 		};
 		4110CD9C1A9CF82000456D43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCECF24D1D6A0DD1B95A0F77 /* Pods-NearbyBackground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S2563944FC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					..,
 				);
 				INFOPLIST_FILE = Source/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rzv.nearbymessages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		4110CD9D1A9CF82000456D43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED8F356C7282EDF32B9EC303 /* Pods-NearbyBackground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S2563944FC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					..,
 				);
 				INFOPLIST_FILE = Source/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rzv.nearbymessages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
